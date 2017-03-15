@@ -32,8 +32,36 @@ connection.connect(function (err) {
         console.log('Example app listening at http://%s:%s', host, port);
     });
 
-    app.get('/path', bodyParser.json(), function (req, res) {
-        var query = 'query';
+    app.get('/getArticles', bodyParser.json(), function (req, res) {
+        var query = 'SELECT * FROM ARTICLES';
+        connection.query(query, function (err, result) {
+            if (err) {
+                console.error('error running query', err);
+            }
+            res.statusCode = 200;
+            res.send(result);
+        });
+    });
+    
+    app.get('/getCategorie', bodyParser.json(), function (req, res) {
+        var query = 'SELECT * FROM CATEGORIE';
+        connection.query(query, function (err, result) {
+            if (err) {
+                console.error('error running query', err);
+            }
+            res.statusCode = 200;
+            res.send(result);
+        });
+    });
+    
+    app.post('/getArticlesByCategorie', bodyParser.json(), function (req,res) {
+        
+        console.log("req= ");
+        console.log(req);
+        console.log("res= ");
+        console.log(res);
+        
+        var query = 'SELECT * FROM Articles WHERE idCategory = '+ req.body.categorie;
         connection.query(query, function (err, result) {
             if (err) {
                 console.error('error running query', err);
