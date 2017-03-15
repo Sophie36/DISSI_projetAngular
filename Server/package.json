@@ -1,0 +1,30 @@
+{
+  "name": "Portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio de Marie DAGNIAU",
+  "main": "server.js",
+  "scripts": {
+    "test": "run tests",
+    "start": "supervisor ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdagniau/PenguBlog.git"
+  },
+  "keywords": [
+    "pengu",
+    "blog",
+    "js"
+  ],
+  "author": "mdagniau",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mdagniau/PenguBlog/issues"
+  },
+  "homepage": "https://github.com/mdagniau/PenguBlog#readme",
+  "dependencies": {
+    "express": ">= 4.13.1",
+    "body-parser": ">= 1.13.3",
+    "mysql": "^2.5.4"
+  }
+}
