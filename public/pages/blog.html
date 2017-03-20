@@ -12,10 +12,11 @@ and open the template in the editor.
             <br/>
             <span ng-click="getArticlesByCategory(categorie.idCategory)">{{categorie.name}}</span><br/>
             <!--{{categorie.date}}<br/>-->
-            {{categorie.name}}<br/>
-            {{categorie.backgroundColor}}
+            
+            
         </div>
     </div>
+    <br/>
     <div id="divListArticles" style="width:100%" ng-repeat="article in listArticles track by $index">
         <div id="article{{$index}}">
             <!--{{article.date}}<br/>-->

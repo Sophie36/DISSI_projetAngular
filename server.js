@@ -63,10 +63,10 @@ connection.connect(function (err) {
     
     app.post('/getArticlesByCategory', bodyParser.json(), function (req,res) {
         
-        console.log("req= ");
+        /*console.log("req= ");
         console.log(req);
         console.log("res= ");
-        console.log(res);
+        console.log(res);*/
         
         var query = 'SELECT * FROM Articles WHERE idCategory = '+ req.body.categorie;
         connection.query(query, function (err, result) {
@@ -78,6 +78,31 @@ connection.connect(function (err) {
         });
     });
     
+    app.post('/path', bodyParser.json(), function (req, res) {
+        var query = 'query';
+        connection.query(query, function (err, result) {
+            if (err) {
+                console.error('error running query', err);
+            }
+            res.statusCode = 200;
+            res.send(result);
+        });
+    });
+    
+    app.post('/addArticle', bodyParser.json(), function (req, res) {
+        console.log("reg = ");
+        console.log(req.body);
+        /*console.log("res = ");
+        console.log(res);*/
+        var query = 'INSERT INTO Articles (title,body,date,idCategory) VALUES (\'' + req.body.title + '\',\'' + req.body.body + '\', \'' + req.body.date + '\', \'' + req.body.idCategory + '\'' + ')';
+        connection.query(query, function (err, result) {
+            if (err) {
+                console.error('error running query', err);
+            }
+            res.statusCode = 200;
+            res.send(result);
+        });
+    });
     app.post('/path', bodyParser.json(), function (req, res) {
         var query = 'query';
         connection.query(query, function (err, result) {

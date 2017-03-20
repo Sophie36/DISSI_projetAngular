@@ -28,6 +28,10 @@ blog.config(['$routeProvider',
                     templateUrl:"pages/projetsPro.html",
                     //controller:'blogCtrl'
                 })
+                .when("/addArticle",{
+                    templateUrl:"pages/addArticle.html",
+                    controller:'addArticleController'
+                })
                 .otherwise({
                     redirectTo: '/blog'
                 });

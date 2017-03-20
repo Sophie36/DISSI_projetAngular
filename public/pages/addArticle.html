@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<div  id="col_left_blog" class="col-md-8 blog" style="height : max-content">
+    <form><br/>
+        Titre :<input type="text" ng-model='newArticle.titre' placeholder="Mettre un titre" size="30" maxlength="10" /><br/>
+        <br/>
+        Sous-titre :<input type="text" ng-model='newArticle.header' placeholder="Questionnement" size="30" maxlength="10" /><br/>
+        <br/>
+        Contenu :<input type="text" ng-model='newArticle.body' placeholder="Explication" size="30" maxlength="10" /><br/>
+        <br/>
+        idCategory :<input type="text" ng-model='newArticle.idCategory' placeholder="numero de l'id" size="30" maxlength="10" /><br/>
+        <br/>
+        <select id="selectCategorie" ng_model="newArticle.categorySelected">
+            <option ng-repeat="categorie in listCategorie" value="{{categorie.idCategory}}">{{categorie.name}}</option>
+        </select>
+        <a ng-click="sendArticle()">Ajouter</a>
+        
+    </form>         
+</div>
