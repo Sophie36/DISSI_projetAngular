@@ -94,7 +94,7 @@ connection.connect(function (err) {
         console.log(req.body);
         /*console.log("res = ");
         console.log(res);*/
-        var query = 'INSERT INTO Articles (title,body,date,idCategory) VALUES (\'' + req.body.title + '\',\'' + req.body.body + '\', \'' + req.body.date + '\', \'' + req.body.idCategory + '\'' + ')';
+        var query = 'INSERT INTO Articles (titre,header,body,idCategory) VALUES (\'' + req.body.titre + '\',\'' + req.body.header + '\', \'' + req.body.body + '\', \'' + req.body.idCategory + '\'' + ')';
         connection.query(query, function (err, result) {
             if (err) {
                 console.error('error running query', err);

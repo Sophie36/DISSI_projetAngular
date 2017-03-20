@@ -4,28 +4,33 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<div  id="col_left_blog" class="col-md-8 blog" style="height : max-content">
-    Toutes les categories
-    
-    <div id="divListCategorie" style="width:100%" ng-repeat="categorie in listCategorie track by $index">
-        <div id="categorie{{$index}}">
-            <br/>
-            <span ng-click="getArticlesByCategory(categorie.idCategory)">{{categorie.name}}</span><br/>
-            <!--{{categorie.date}}<br/>-->
-            
-            
+    <div  id="col_left_blog" class="col-md-8 blog" style="height : max-content">
+        Toutes les categories
+
+        <div id="divListCategorie" style="width:100%" ng-repeat="categorie in listCategorie track by $index">
+            <div id="categorie{{$index}}">
+                <br/>
+                <span ng-click="getArticlesByCategory(categorie.idCategory)">{{categorie.name}}</span><br/>
+                <!--{{categorie.date}}<br/>-->
+
+
+            </div>
         </div>
+        <br/>
+        <div id="divListArticles" style="width:100%" ng-repeat="article in listArticles track by $index">
+            <div id="article{{$index}}">
+                <!--{{article.date}}<br/>-->
+                {{article.title}}<br/>
+                {{article.header}}<br/>
+                {{article.body}}<br/>
+                {{article.backgroundColor}}
+
+            </div>
+        </div> 
+        
+        <div>
+            <p ng-bind-html="myText"></p>
+        </div> 
+        
     </div>
-    <br/>
-    <div id="divListArticles" style="width:100%" ng-repeat="article in listArticles track by $index">
-        <div id="article{{$index}}">
-            <!--{{article.date}}<br/>-->
-            {{article.title}}<br/>
-            {{article.header}}<br/>
-            {{article.body}}<br/>
-            {{article.backgroundColor}}
-        </div>
-    </div> 
-     
-</div>
 <script src="public/js/common.js" type="text/javascript"></script>

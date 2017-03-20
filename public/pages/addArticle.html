@@ -12,12 +12,13 @@ and open the template in the editor.
         <br/>
         Contenu :<input type="text" ng-model='newArticle.body' placeholder="Explication" size="30" maxlength="10" /><br/>
         <br/>
-        idCategory :<input type="text" ng-model='newArticle.idCategory' placeholder="numero de l'id" size="30" maxlength="10" /><br/>
-        <br/>
+        
         <select id="selectCategorie" ng_model="newArticle.categorySelected">
             <option ng-repeat="categorie in listCategorie" value="{{categorie.idCategory}}">{{categorie.name}}</option>
         </select>
         <a ng-click="sendArticle()">Ajouter</a>
         
-    </form>         
+    </form>  
+    
+
 </div>

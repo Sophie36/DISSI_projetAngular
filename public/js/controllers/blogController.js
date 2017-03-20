@@ -32,6 +32,7 @@ $scope.getArticlesByCategory= function(index){
        
     });
 }
+        $scope.myText ="<b>test</b>";
 });
 
 

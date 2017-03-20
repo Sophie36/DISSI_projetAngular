@@ -22,7 +22,7 @@ $scope.sendArticle= function(){
         titre : $scope.newArticle.titre,
         header : $scope.newArticle.header,
         body : $scope.newArticle.body,
-        idCategory : $scope.newArticle.idCategory,
+        idCategory : $scope.newArticle.categorySelected
     };
     $http.post('addArticle', newArticle).then(function (resp){
         $scope.newArticle.titre = "";
@@ -32,13 +32,13 @@ $scope.sendArticle= function(){
     });
 }
 
-$scope.cancelnewArticle= function(){
+/*$scope.cancelnewArticle= function(){
     if($scope.newArticle !== undefined){
         $scope.newArticle.titre,
         $scope.newArticle.header,
         $scope.newArticle.body,
         $scope.newArticle.idCategory
     }
-}
+}*/
    
 });
