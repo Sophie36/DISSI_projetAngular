@@ -1,6 +1,6 @@
 'use strict';
 
-var blog = angular.module('blog', ['ngRoute', 'ngResource']);
+var blog = angular.module('blog', ['ngRoute', 'ngResource','ngSanitize']);
 blog.config(['$routeProvider',
     function ($routeProvider){
         $routeProvider
