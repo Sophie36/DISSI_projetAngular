@@ -39,6 +39,11 @@ blog.config(['$routeProvider',
                     templateUrl:"pages/addArticle.html",
                     controller:'addArticleController'
                 })
+                /*.when("/addArticle/:idArticles",{
+                        title : "AjoutArticle",
+                    templateUrl:"pages/addArticle.html",
+                    controller:'addArticleController'
+                })*/
                 .otherwise({
                     redirectTo: '/blog'
                 });

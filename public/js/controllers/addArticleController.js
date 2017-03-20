@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-blog.controller('addArticleController', function ($scope, $http) {
+blog.controller('addArticleController', function ($scope, $http, $routeParams) {
   $scope.hello = "hello World !";
+  var paramValue = $routeParams.idArticles
+  alert (paramValue);
   
 listCategorie();
 function listCategorie(){
