@@ -1,8 +1,31 @@
 {
-    "name": "PortfolioBlog_Etudiants",
-    "version": "1.0.0",
-    "keywords": ["util", "functional", "server", "client", "browser"],
-    "author": "slemaire",
-    "contributors": [],
-    "dependencies": {}
+  "name": "Portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio de Marie DAGNIAU",
+  "main": "server.js",
+  "scripts": {
+    "test": "run tests",
+    "start": "supervisor ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdagniau/PenguBlog.git"
+  },
+  "keywords": [
+    "pengu",
+    "blog",
+    "js"
+  ],
+  "author": "mdagniau",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mdagniau/PenguBlog/issues"
+  },
+  "homepage": "https://github.com/mdagniau/PenguBlog#readme",
+  "dependencies": {
+    "body-parser": ">= 1.13.3",
+    "express": ">= 4.13.1",
+    "fs": "0.0.1-security",
+    "mysql": "^2.5.4"
+  }
 }

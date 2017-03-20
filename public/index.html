@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="blog">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <script src="js/librairies/jquery-3.1.1.js" type="text/javascript"></script> 
+        <script src="js/librairies/jquery-ui.js" type="text/javascript"></script>
+        <script src="js/librairies/bootstrap.js" type="text/javascript"></script>
+        <script src="js/librairies/angular.min.js" type="text/javascript"></script>
+        <script src="js/librairies/angular-route.js" type="text/javascript"></script>
+        <link href="css/jquery-ui.css" rel="stylesheet" type="text/css"/>
+        <link href="css/jquery-ui.theme.css" rel="stylesheet" type="text/css"/>
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="css/styles.css" rel="stylesheet" type="text/css"/>
+        <title></title>
+    </head>
+    <body>
+        <a href="#blog">1er lien</a>
+        <a href="#contact">2eme lien</a>
+        <a href="#cv">3eme lien</a>
+        <a href="#insta">4eme lien</a>
+        <a href="#projetsPerso">5eme lien</a>
+        <a href="#projetsPro">6eme lien</a>
+        <div ng-view></div>
+        <script src="js/app.js" type="text/javascript"></script>
+        <script src="js/controllers/blogController.js" type="text/javascript"></script>
+    </body>
+</html>

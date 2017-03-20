@@ -5,27 +5,27 @@ blog.config(['$routeProvider',
     function ($routeProvider){
         $routeProvider
                 .when("/blog",{
-                    templateUrl:"public/pages/blog.html",
+                    templateUrl:"pages/blog.html",
                     controller:'blogCtrl'
                 })
                 .when("/contact",{
-                    templateUrl:"public/pages/contact.html",
+                    templateUrl:"pages/contact.html",
                     controller:'blogCtrl'
                 })
                 .when("/cv",{
-                    templateUrl:"public/pages/cv.html",
+                    templateUrl:"pages/cv.html",
                     controller:'blogCtrl'
                 })
                 .when("/insta",{
-                    templateUrl:"public/pages/insta.html",
+                    templateUrl:"pages/insta.html",
                     //controller:'blogCtrl'
                 })
                 .when("/projetsPerso",{
-                    templateUrl:"public/pages/projetsPerso.html",
+                    templateUrl:"pages/projetsPerso.html",
                     //controller:'blogCtrl'
                 })
                 .when("/projetsPro",{
-                    templateUrl:"public/pages/projetsPro.html",
+                    templateUrl:"pages/projetsPro.html",
                     //controller:'blogCtrl'
                 })
                 .otherwise({

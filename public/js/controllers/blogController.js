@@ -4,12 +4,12 @@ blog.controller('blogCtrl', function ($scope, $http) {
   //$scope.bidule = "coucou c'est moi bidule !";
   getArticles();
   getCategorie();
-  getArticlesByCategory();
+  
   
 function getArticles(){
     $http({
         method: 'get',
-        url: 'http://localhost:8090/getArticles'
+        url: 'getArticles'
     }).then(function (resp){
         console.log(resp);
         $scope.listArticles = resp.data;
@@ -18,7 +18,7 @@ function getArticles(){
 function getCategorie(){
     $http({
         method: 'get',
-        url: 'http://localhost:8090/getCategorie'
+        url: 'getCategorie'
     }).then(function (resp){
         console.log(resp);
         $scope.listCategorie = resp.data;
@@ -26,7 +26,7 @@ function getCategorie(){
 }
 $scope.getArticlesByCategory= function(index){
     var categorieSelected = {categorie:index};
-    $http.post('http://localhost:8090/getArticlesByCategory', categorieSelected).then(function (resp){
+    $http.post('getArticlesByCategory', categorieSelected).then(function (resp){
         
         $scope.listArticles = resp.data;  
        

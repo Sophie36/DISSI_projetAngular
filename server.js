@@ -1,6 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var mysql = require('mysql');
+var fs = require('fs');
 
 //Connection to database
 var connection = mysql.createConnection({
@@ -24,12 +25,18 @@ connection.connect(function (err) {
         res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
         next();
     });
+    
+    app.use(express.static(__dirname + "/public"));
 
     var server = app.listen(8090, function () {
         var host = server.address().address;
         var port = server.address().port;
 
         console.log('Example app listening at http://%s:%s', host, port);
+    });
+
+    app.get('/', function (req,res) {
+        res.sendFile('/public/index.html',{root:__dirname});
     });
 
     app.get('/getArticles', bodyParser.json(), function (req, res) {
@@ -54,7 +61,7 @@ connection.connect(function (err) {
         });
     });
     
-    app.post('/getArticlesByCategorie', bodyParser.json(), function (req,res) {
+    app.post('/getArticlesByCategory', bodyParser.json(), function (req,res) {
         
         console.log("req= ");
         console.log(req);
