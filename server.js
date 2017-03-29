@@ -78,6 +78,17 @@ connection.connect(function (err) {
         });
     });
     
+    app.post('/getArticlesByDate', bodyParser.json(), function (req,res) {
+        var query = 'SELECT * FROM Articles WHERE date = '+ req.body.articles;
+        connection.query(query, function (err, result) {
+            if (err) {
+                console.error('error running query', err);
+            }
+            res.statusCode = 200;
+            res.send(result);
+        });
+    });
+    
     app.post('/path', bodyParser.json(), function (req, res) {
         var query = 'query';
         connection.query(query, function (err, result) {

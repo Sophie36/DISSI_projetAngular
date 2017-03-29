@@ -31,6 +31,15 @@ and open the template in the editor.
         <div>
             <p ng-bind-html="myText"></p>
         </div> 
-        
+        <div class="col-md-4">
+            
+            <input type="text" ng-model="date" jqdatepicker />
+            <br/>
+            {{ date }}
+            
+            <!--<button ng-click="displaydp()">AFFICHER LE DATEPICKER</button>
+            <div datepicker ng-model="datePicker" id="datePicker" style="display:none" class="col-md-12"></div>-->
+        </div>
     </div>
+<br/>
 <script src="public/js/common.js" type="text/javascript"></script>
